@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using LoginWindow;
 
-public class MainStartwindow : UIWindowBase<MainStartController, LoginWindowRef> {
+public class MainStartwindow : UIWindowBase<MainStartController, LoginWindowRef>
+{
 
     protected override void Awake()
     {
@@ -12,10 +13,12 @@ public class MainStartwindow : UIWindowBase<MainStartController, LoginWindowRef>
 
     protected override bool Open()
     {
-        return base.Open();
         Ref.OnStartCallback = () =>
         {
             Debug.LogError("123");
         };
+        //Ctrler = 0;
+        return base.Open();
+
     }
 }

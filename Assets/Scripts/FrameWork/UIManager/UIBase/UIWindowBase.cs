@@ -7,23 +7,17 @@ public class UIWindowBase<C,REF> : UIWindowBase
     where REF : UGUIRefNode
 {
     public C Ctrler { get { return base.Ctrler as C; } }
-    public REF Ref
-    {
-        get
-        {
-            return GetComponent<REF>();
-        }
-        set
-        {
-            Ref = value;
-        }
-    }
+    public REF Ref { get; private set; }
 
 
     protected override void  Awake()
     {
         base.Awake();
         Ref = GetComponent<REF>();
+        if(Ref == null)
+        {
+            Debug.LogError("Ref == null");
+        }
     }
 
 }

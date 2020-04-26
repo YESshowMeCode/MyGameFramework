@@ -14,4 +14,14 @@ using Test;
 public class TestController :UIBaseController<TestWindow> {
 
 
+    public int iter = 0;
+    public override void PanelOpened(CtrlParams pars)
+    {
+        base.PanelOpened(pars);
+    }
+
+    public override void PanelClose()
+    {
+        base.PanelClose();
+    }
 }

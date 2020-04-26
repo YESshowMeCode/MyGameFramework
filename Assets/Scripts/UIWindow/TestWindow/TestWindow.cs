@@ -21,11 +21,13 @@ public class TestWindow : UIWindowBase<TestController,TestWindowRef> {
 
     protected override bool Open()
     {
-        return base.Open();
         Ref.OnStartCallback = () =>
         {
 
         };
+        Ctrler.iter = 1;
+        return base.Open();
+
     }
 
     protected override bool Close()

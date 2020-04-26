@@ -30,7 +30,7 @@ public class BaseClassScript : MonoBehaviour {
     private bool isGameObjectCached = false;
     private GameObject m_gameObject;
 
-    private GameObject CacheGameObject
+    public GameObject CacheGameObject
     {
         get
         {
