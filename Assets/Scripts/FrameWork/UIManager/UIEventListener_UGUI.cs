@@ -86,7 +86,7 @@ public class UIEventListener_UGUI :BaseClassScript,IPointerDownHandler,IPointerU
     }
 
 
-    public void OnPointDown(PointerEventData eventData)
+    public void OnPointerDown(PointerEventData eventData)
     {
         isPressDown = true;
 
@@ -96,7 +96,7 @@ public class UIEventListener_UGUI :BaseClassScript,IPointerDownHandler,IPointerU
         }
     }
 
-    public void OnPointUp(PointerEventData eventData)
+    public void OnPointerUp(PointerEventData eventData)
     {
 
         if (onUp != null)
@@ -232,7 +232,7 @@ public class UIEventListener_UGUI :BaseClassScript,IPointerDownHandler,IPointerU
     }
 
     //点击事件
-    public void PointerClick(PointerEventData eventData)
+    public void OnPointerClick(PointerEventData eventData)
     {
         if(!IsLongPressEmpty() && isLongPressed)
         {
